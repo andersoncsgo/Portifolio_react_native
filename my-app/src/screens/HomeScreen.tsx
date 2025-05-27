@@ -11,14 +11,27 @@ export default function HomeScreen() {
         style={styles.image}
       />
       <Text style={styles.title}>Anderson Lucas</Text>
-      <Text style={styles.subtitle}>Desenvolvedor de Software</Text>
+      <Text style={styles.subtitle} numberOfLines={2} adjustsFontSizeToFit>
+        Desenvolvedor de software
+    </Text>
+
 
       <View style={styles.buttons}>
-        <Button title="Sobre" onPress={() => navigation.navigate('Sobre')} />
-        <Button title="Experiência Acadêmica" onPress={() => navigation.navigate('ExperienciaAcademica')} />
-        <Button title="Experiência Profissional" onPress={() => navigation.navigate('ExperienciaProfissional')} />
-        <Button title="Projetos" onPress={() => navigation.navigate('Projetos')} />
-        <Button title="Jogo da Senha" onPress={() => navigation.navigate('Jogo')} />
+        <View style={styles.button}>
+          <Button title="Sobre" onPress={() => navigation.navigate('Sobre')} />
+        </View>
+        <View style={styles.button}>
+          <Button title="Experiência Acadêmica" onPress={() => navigation.navigate('ExperienciaAcademica')} />
+        </View>
+        <View style={styles.button}>
+          <Button title="Experiência Profissional" onPress={() => navigation.navigate('ExperienciaProfissional')} />
+        </View>
+        <View style={styles.button}>
+          <Button title="Projetos" onPress={() => navigation.navigate('Projetos')} />
+        </View>
+        <View style={styles.button}>
+          <Button title="Jogo da Senha" onPress={() => navigation.navigate('Jogo')} />
+        </View>
       </View>
     </View>
   );
@@ -51,7 +64,9 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   buttons: {
-    gap: 10,
     width: '100%',
+  },
+  button: {
+    marginBottom: 10,
   },
 });
